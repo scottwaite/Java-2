@@ -3,7 +3,7 @@ package com.scottwaite.android.listfragmentdemo;
 import android.app.Activity;
 import android.os.Bundle;
 
-import com.scottwaite.android.listfragmentdemo.fragment.PresidentListFragment;
+import com.scottwaite.android.listfragmentdemo.fragment.ShowtimeListFragment;
 
 public class MainActivity extends Activity {
 
@@ -13,9 +13,9 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		if(_savedInstanceState == null) {
-			PresidentListFragment frag = PresidentListFragment.newInstance();
+			ShowtimeListFragment frag = ShowtimeListFragment.newInstance();
 			getFragmentManager().beginTransaction()
-				.replace(R.id.fragment_container, frag, PresidentListFragment.TAG).commit();
+				.replace(R.id.fragment_container, frag, ShowtimeListFragment.TAG).commit();
 		}
 	}
 }

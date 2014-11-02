@@ -9,12 +9,12 @@ import android.widget.ListView;
 
 import com.scottwaite.android.listfragmentdemo.R;
 
-public class PresidentListFragment extends ListFragment {
+public class ShowtimeListFragment extends ListFragment {
 	
-	public static final String TAG = "PresidentListFragment.TAG";
+	public static final String TAG = "ShowtimeListFragment.TAG";
 	
-	public static PresidentListFragment newInstance() {
-		PresidentListFragment frag = new PresidentListFragment();
+	public static ShowtimeListFragment newInstance() {
+		ShowtimeListFragment frag = new ShowtimeListFragment();
 		return frag;
 	}
 	
@@ -22,19 +22,19 @@ public class PresidentListFragment extends ListFragment {
 	public void onActivityCreated(Bundle _savedInstanceState) {
 		super.onActivityCreated(_savedInstanceState);
 		
-		String[] presidents = getResources().getStringArray(R.array.presidents);
+		String[] showtimes = getResources().getStringArray(R.array.showtimes);
 		
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, presidents);
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, showtimes);
 		setListAdapter(adapter);
 	}
 	
 	@Override
 	public void onListItemClick(ListView _l, View _v, int _position, long _id) {
-		String president = (String)_l.getItemAtPosition(_position);
+		String showtime = (String)_l.getItemAtPosition(_position);
 		
 		new AlertDialog.Builder(getActivity())
-		.setTitle(R.string.president)
-		.setMessage(getString(R.string.selected, president))
+		.setTitle(R.string.showtime)
+		.setMessage(getString(R.string.selected, showtime))
 		.setPositiveButton(R.string.ok, null)
 		.show();
 	}
