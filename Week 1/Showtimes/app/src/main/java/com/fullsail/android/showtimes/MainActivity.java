@@ -1,9 +1,9 @@
-package com.scottwaite.android.listfragmentdemo;
+package com.scottwaite.android.showtimes;
 
 import android.app.Activity;
 import android.os.Bundle;
 
-import com.scottwaite.android.listfragmentdemo.fragment.ShowtimeListFragment;
+import com.scottwaite.android.showtimes.fragment.ShowtimeListFragment;
 
 public class MainActivity extends Activity {
 

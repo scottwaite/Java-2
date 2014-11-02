@@ -1,4 +1,4 @@
-package com.scottwaite.android.listfragmentdemo.fragment;
+package com.scottwaite.android.showtimes.fragment;
 
 import android.app.AlertDialog;
 import android.app.ListFragment;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.scottwaite.android.listfragmentdemo.R;
+import com.scottwaite.android.showtimes.R;
 
 public class ShowtimeListFragment extends ListFragment {
 	
