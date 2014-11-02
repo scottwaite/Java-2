@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Weather Tracker</string>
+    
+    <string name="city_ny">New York, NY</string>
+    <string name="android_8">Los Angeles, CA</string>
+    <string name="android_11">Tampa, FL</string>
+    <string name="android_14">Houston, TX</string>
+    
+    <string name="city_ny_name">New York, NY - Partly Cloudy, 61°46°, Precipitation: 10%, Humidity: 55%</string>
+    <string name="android_8_name">Los Angeles, CA - Partly Cloudy, 61°46°, Precipitation: 10%, Humidity: 55%</string>
+    <string name="android_11_name">Tampa, FL - Partly Cloudy, 61°46°, Precipitation: 10%, Humidity: 55%</string>
+    <string name="android_14_name">Houston, TX - Partly Cloudy, 61°46°, Precipitation: 10%, Humidity: 55%</string>
+
+</resources>
