@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="TypographyDashes">
+
+    <string name="app_name">Search Showtimes</string>
+    <string name="showtime">Showtime Selected</string>
+    <string name="selected">You selected\n%1$s.</string>
+    <string name="ok">OK</string>
+
+	<string-array name="showtimes">
+		<item>Ouija</item>
+		<item>John Wick</item>
+		<item>Fury</item>
+		<item>Gone Girl</item>
+		<item>The Book of Life</item>
+		<item>St. Vincent</item>
+		<item>Alexander and the Terrible, Horrible, No</item>
+		<item>The Best Of Me</item>
+		<item>Dracula Untold</item>
+		<item>The Judge</item>
+		<item>Annabelle</item>
+		<item>The Equalizer</item>
+		<item>The Maze Runner</item>
+		<item>Addicted</item>
+		<item>Birdman</item>
+	</string-array>
+</resources>
