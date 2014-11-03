@@ -25,6 +25,8 @@ import org.json.JSONObject;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
+
+
 public class MainActivity extends Activity
 {
     // Rotten Tomatoes API Key
@@ -89,6 +91,7 @@ public class MainActivity extends Activity
             catch (Exception e)
             {
                 Log.d("Test", "Unable to complete request. Please check connection.");
+
             }
             return responseString;
         }
