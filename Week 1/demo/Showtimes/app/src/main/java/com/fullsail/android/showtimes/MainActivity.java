@@ -1,5 +1,14 @@
 package com.scottwaite.android.showtimes;
 
+/*
+Created By: Scott Waite
+Course: Java II
+Instructor: Sherry Dubin
+Assignment: Fragment & File Fundamentals
+Date: November 2, 2014
+*/
+
+
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
