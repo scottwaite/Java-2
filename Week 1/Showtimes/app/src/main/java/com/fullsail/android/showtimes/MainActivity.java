@@ -11,7 +11,7 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle _savedInstanceState) {
 		super.onCreate(_savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
+
 		if(_savedInstanceState == null) {
 			ShowtimeListFragment frag = ShowtimeListFragment.newInstance();
 			getFragmentManager().beginTransaction()
