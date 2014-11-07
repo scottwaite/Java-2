@@ -10,13 +10,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.example.android.fragments.data.Flower;
+import com.example.android.fragments.data.Movie;
 
 
 public class MainActivity extends Activity
-    implements FlowerListFragment.Callbacks {
+    implements MovieListFragment.Callbacks {
 
-    public static final String FLOWER_BUNDLE = "FLOWER_BUNDLE";
+    public static final String MOVIE_BUNDLE = "MOVIE_BUNDLE";
     private static final int REQUEST_CODE = 1001;
 
     private boolean isTwoPane = false;
@@ -66,19 +66,19 @@ public class MainActivity extends Activity
     }
 
     @Override
-    public void onItemSelected(Flower flower) {
-        Bundle b = flower.toBundle();
+    public void onItemSelected(Movie movie) {
+        Bundle b = movie.toBundle();
 
         if (isTwoPane) {
-            FlowerDetailFragment fragment = new FlowerDetailFragment();
+            MovieDetailFragment fragment = new MovieDetailFragment();
             fragment.setArguments(b);
             getFragmentManager().beginTransaction()
                     .replace(R.id.detailContainer, fragment)
                     .commit();
         }
         else {
-            Intent intent = new Intent(this, FlowerDetailActivity.class);
-            intent.putExtra(FLOWER_BUNDLE, b);
+            Intent intent = new Intent(this, MovieDetailActivity.class);
+            intent.putExtra(MOVIE_BUNDLE, b);
             startActivityForResult(intent, REQUEST_CODE);
         }
     }

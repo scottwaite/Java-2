@@ -7,7 +7,7 @@
     android:paddingBottom="10dp">
 
     <ImageView
-        android:id="@+id/ivFlowerImage"
+        android:id="@+id/ivMovieImage"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_alignParentLeft="true"
@@ -16,12 +16,12 @@
         android:contentDescription="@string/placeholder" />
 
     <TextView
-        android:id="@+id/tvFlowerName"
+        android:id="@+id/tvMovieName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@+id/ivFlowerImage"
+        android:layout_toRightOf="@+id/ivMovieImage"
         android:text="@string/placeholder"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 

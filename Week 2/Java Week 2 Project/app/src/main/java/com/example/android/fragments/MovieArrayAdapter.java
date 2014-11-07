@@ -9,16 +9,16 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.android.fragments.data.Flower;
+import com.example.android.fragments.data.Movie;
 
 import java.util.List;
 
-public class FlowerArrayAdapter extends ArrayAdapter<Flower> {
+public class MovieArrayAdapter extends ArrayAdapter<Movie> {
 
 	private Context context;
-	private List<Flower> objects;
+	private List<Movie> objects;
 	
-	public FlowerArrayAdapter(Context context, int resource, List<Flower> objects) {
+	public MovieArrayAdapter(Context context, int resource, List<Movie> objects) {
 		super(context, resource, objects);
 		this.context = context;
 		this.objects = objects;
@@ -26,17 +26,17 @@ public class FlowerArrayAdapter extends ArrayAdapter<Flower> {
 	
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		Flower flower = objects.get(position);
+		Movie movie = objects.get(position);
 		
 		LayoutInflater inflater = 
 				(LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
-		View view = inflater.inflate(R.layout.flower_listitem, null);
+		View view = inflater.inflate(R.layout.movie_listitem, null);
 		
-		ImageView image = (ImageView) view.findViewById(R.id.ivFlowerImage);
-		image.setImageResource(flower.getImageResource());
+		ImageView image = (ImageView) view.findViewById(R.id.ivMovieImage);
+		image.setImageResource(movie.getImageResource());
 		
-		TextView tv = (TextView) view.findViewById(R.id.tvFlowerName);
-		tv.setText(flower.getFlowerName());
+		TextView tv = (TextView) view.findViewById(R.id.tvMovieName);
+		tv.setText(movie.getMovieName());
 		
 		return view;
 	}

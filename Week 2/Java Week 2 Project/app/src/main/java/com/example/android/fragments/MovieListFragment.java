@@ -8,29 +8,29 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.example.android.fragments.data.Flower;
-import com.example.android.fragments.data.FlowerData;
+import com.example.android.fragments.data.Movie;
+import com.example.android.fragments.data.MovieData;
 
 import java.util.List;
 
 /**
  * Created by David on 7/16/2014.
  */
-public class FlowerListFragment extends ListFragment {
+public class MovieListFragment extends ListFragment {
 
-    List<Flower> flowers = new FlowerData().getFlowers();
+    List<Movie> movies = new MovieData().getMovies();
     private Callbacks activity;
 
-    public FlowerListFragment() {
+    public MovieListFragment() {
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        FlowerArrayAdapter adapter = new FlowerArrayAdapter(getActivity(),
-                R.layout.flower_listitem,
-                flowers);
+        MovieArrayAdapter adapter = new MovieArrayAdapter(getActivity(),
+                R.layout.movie_listitem,
+                movies);
         setListAdapter(adapter);
     }
 
@@ -38,18 +38,18 @@ public class FlowerListFragment extends ListFragment {
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.flower_list_fragment, container, false);
+        View rootView = inflater.inflate(R.layout.movie_list_fragment, container, false);
         return rootView;
     }
 
     public interface Callbacks {
-        public void onItemSelected(Flower flower);
+        public void onItemSelected(Movie movie);
     }
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
-        Flower flower = flowers.get(position);
-        activity.onItemSelected(flower);
+        Movie movie = movies.get(position);
+        activity.onItemSelected(movie);
     }
 
     @Override

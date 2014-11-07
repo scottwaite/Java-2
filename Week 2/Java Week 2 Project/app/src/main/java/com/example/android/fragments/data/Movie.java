@@ -2,27 +2,27 @@ package com.example.android.fragments.data;
 
 import android.os.Bundle;
 
-public class Flower {
+public class Movie {
 
     //	constants for field references
-    public static final String FLOWER_NAME = "flowerName";
+    public static final String MOVIE_NAME = "movieName";
     public static final String IMAGE_RESOURCE = "imageResource";
     public static final String PRICE = "price";
     public static final String INSTRUCTIONS = "instructions";
 
     //	private fields
-    private String flowerName;
+    private String movieName;
     private int imageResource;
     private String instructions;
     private double price;
 
     //	getters and setters
-    public String getFlowerName() {
-        return flowerName;
+    public String getMovieName() {
+        return movieName;
     }
 
-    public void setFlowerName(String flowerName) {
-        this.flowerName = flowerName;
+    public void setMovieName(String movieName) {
+        this.movieName = movieName;
     }
 
     public int getImageResource() {
@@ -50,17 +50,17 @@ public class Flower {
     }
 
     //	Used when creating the data object
-    public Flower(String id, int imageResource, double price, String instructions) {
-        this.flowerName = id;
+    public Movie(String id, int imageResource, double price, String instructions) {
+        this.movieName = id;
         this.imageResource = imageResource;
         this.price = price;
         this.instructions = instructions;
     }
 
     //	Create from a bundle
-    public Flower(Bundle b) {
+    public Movie(Bundle b) {
         if (b != null) {
-            this.flowerName = b.getString(FLOWER_NAME);
+            this.movieName = b.getString(MOVIE_NAME);
             this.imageResource = b.getInt(IMAGE_RESOURCE);
             this.price = b.getDouble(PRICE);
             this.instructions = b.getString(INSTRUCTIONS);
@@ -70,17 +70,17 @@ public class Flower {
     //	Package data for transfer between activities
     public Bundle toBundle() {
         Bundle b = new Bundle();
-        b.putString(FLOWER_NAME, this.flowerName);
+        b.putString(MOVIE_NAME, this.movieName);
         b.putInt(IMAGE_RESOURCE, this.imageResource);
         b.putDouble(PRICE, this.price);
         b.putString(INSTRUCTIONS, this.instructions);
         return b;
     }
 
-    //	Output flower data
+    //	Output movie data
     @Override
     public String toString() {
-        return flowerName;
+        return movieName;
     }
 
 }

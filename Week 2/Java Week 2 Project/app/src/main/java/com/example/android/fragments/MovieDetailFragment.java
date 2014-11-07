@@ -8,24 +8,24 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.android.fragments.data.Flower;
+import com.example.android.fragments.data.Movie;
 
 import java.text.NumberFormat;
 
-public class FlowerDetailFragment extends Fragment {
+public class MovieDetailFragment extends Fragment {
 
-    Flower flower;
+    Movie movie;
 
 //    Required no-args constructor
-    public FlowerDetailFragment() {}
+    public MovieDetailFragment() {}
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         Bundle b = getArguments();
-        if (b != null && b.containsKey(Flower.FLOWER_NAME)) {
-            flower = new Flower(b);
+        if (b != null && b.containsKey(Movie.MOVIE_NAME)) {
+            movie = new Movie(b);
         }
     }
 
@@ -33,23 +33,23 @@ public class FlowerDetailFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
 //        Load the layout
-        View view = inflater.inflate(R.layout.flower_detail_fragment, container, false);
+        View view = inflater.inflate(R.layout.movie_detail_fragment, container, false);
 
-        if (flower != null) {
+        if (movie != null) {
 
             //Display values and image
-            TextView tvName = (TextView) view.findViewById(R.id.tvFlowerName);
-            tvName.setText(flower.getFlowerName());
+            TextView tvName = (TextView) view.findViewById(R.id.tvMovieName);
+            tvName.setText(movie.getMovieName());
 
             TextView tvInstructions = (TextView) view.findViewById(R.id.tvInstructions);
-            tvInstructions.setText(flower.getInstructions());
+            tvInstructions.setText(movie.getInstructions());
 
             NumberFormat fmt = NumberFormat.getCurrencyInstance();
             TextView tvPrice = (TextView) view.findViewById(R.id.tvPrice);
-            tvPrice.setText(fmt.format(flower.getPrice()));
+            tvPrice.setText(fmt.format(movie.getPrice()));
 
-            ImageView ivPicture = (ImageView) view.findViewById(R.id.ivFlowerImage);
-            ivPicture.setImageResource(flower.getImageResource());
+            ImageView ivPicture = (ImageView) view.findViewById(R.id.ivMovieImage);
+            ivPicture.setImageResource(movie.getImageResource());
 
         }
 

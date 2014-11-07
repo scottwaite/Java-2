@@ -5,20 +5,20 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 // This activity is only used in single pane mode.
-public class FlowerDetailActivity extends Activity {
+public class MovieDetailActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_flower_detail);
+		setContentView(R.layout.activity_movie_detail);
 
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 
         if (savedInstanceState == null) {
 //          Create the fragment, set its args, add it to the detail container
-            FlowerDetailFragment fragment = new FlowerDetailFragment();
+            MovieDetailFragment fragment = new MovieDetailFragment();
 
-            Bundle b = getIntent().getBundleExtra(MainActivity.FLOWER_BUNDLE);
+            Bundle b = getIntent().getBundleExtra(MainActivity.MOVIE_BUNDLE);
             fragment.setArguments(b);
 
             getFragmentManager().beginTransaction()

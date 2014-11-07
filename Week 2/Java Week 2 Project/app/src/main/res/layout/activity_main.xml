@@ -7,9 +7,9 @@
 
     <Spinner
         android:id="@+id/listFragment"
-        android:name="com.example.android.fragments.FlowerListFragment"
+        android:name="com.example.android.fragments.MovieListFragment"
         android:layout_width="fill_parent"
         android:layout_height="104dp"
-        tools:layout="@layout/flower_list_fragment" />
+        tools:layout="@layout/movie_list_fragment" />
 
 </FrameLayout>
