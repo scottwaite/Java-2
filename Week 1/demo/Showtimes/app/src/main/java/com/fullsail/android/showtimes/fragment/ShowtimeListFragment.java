@@ -1,5 +1,13 @@
 package com.scottwaite.android.showtimes.fragment;
 
+/*
+Created By: Scott Waite
+Course: Java II
+Instructor: Sherry Dubin
+Assignment: Fragment & File Fundamentals
+Date: November 2, 2014
+*/
+
 import android.app.AlertDialog;
 import android.app.ListFragment;
 import android.os.Bundle;
