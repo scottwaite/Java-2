@@ -1,4 +1,4 @@
-package com.example.android.fragments;
+package com.scottwaite.android.fragments;
 
 import android.app.Activity;
 import android.app.ListFragment;
@@ -8,8 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.example.android.fragments.data.Movie;
-import com.example.android.fragments.data.MovieData;
+import com.scottwaite.android.fragments.data.Movie;
+import com.scottwaite.android.fragments.data.MovieData;
 
 import java.util.List;
 

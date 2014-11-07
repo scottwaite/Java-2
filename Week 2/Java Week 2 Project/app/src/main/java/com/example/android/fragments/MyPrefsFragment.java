@@ -1,4 +1,4 @@
-package com.example.android.fragments;
+package com.scottwaite.android.fragments;
 
 import android.os.Bundle;
 import android.preference.PreferenceFragment;

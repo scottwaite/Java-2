@@ -1,4 +1,4 @@
-package com.example.android.fragments;
+package com.scottwaite.android.fragments;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

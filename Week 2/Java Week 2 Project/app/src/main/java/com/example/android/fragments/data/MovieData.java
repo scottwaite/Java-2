@@ -1,6 +1,6 @@
-package com.example.android.fragments.data;
+package com.scottwaite.android.fragments.data;
 
-import com.example.android.fragments.R;
+import com.scottwaite.android.fragments.R;
 
 import java.util.ArrayList;
 import java.util.List;

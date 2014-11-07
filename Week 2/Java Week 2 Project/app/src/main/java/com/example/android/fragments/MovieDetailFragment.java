@@ -1,4 +1,4 @@
-package com.example.android.fragments;
+package com.scottwaite.android.fragments;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.android.fragments.data.Movie;
+import com.scottwaite.android.fragments.data.Movie;
 
 import java.text.NumberFormat;
 

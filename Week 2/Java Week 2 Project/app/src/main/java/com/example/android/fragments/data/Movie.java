@@ -1,4 +1,4 @@
-package com.example.android.fragments.data;
+package com.scottwaite.android.fragments.data;
 
 import android.os.Bundle;
 
