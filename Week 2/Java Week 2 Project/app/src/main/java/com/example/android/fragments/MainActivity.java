@@ -98,8 +98,8 @@ public class MainActivity extends Activity
         if (requestCode == 1002) {
             SharedPreferences myPrefs =
                     PreferenceManager.getDefaultSharedPreferences(this);
-            boolean pref1 = myPrefs.getBoolean("pref1", false);
-            Toast.makeText(this, "Preference: " + pref1, Toast.LENGTH_SHORT).show();
+            boolean api_data = myPrefs.getBoolean("api_data", false);
+            Toast.makeText(this, "Load from API: " + api_data, Toast.LENGTH_SHORT).show();
         }
     }
 }

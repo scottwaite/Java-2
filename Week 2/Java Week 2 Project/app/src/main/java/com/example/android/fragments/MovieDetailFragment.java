@@ -9,6 +9,7 @@ Date: November 6, 2014
 */
 
 import android.app.Fragment;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,7 +25,6 @@ public class MovieDetailFragment extends Fragment {
 
     Movie movie;
 
-//    Required no-args constructor
     public MovieDetailFragment() {}
 
     @Override
@@ -40,12 +40,13 @@ public class MovieDetailFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-//        Load the layout
+
+
+
         View view = inflater.inflate(R.layout.movie_detail_fragment, container, false);
 
         if (movie != null) {
 
-            //Display values and image
             TextView tvName = (TextView) view.findViewById(R.id.tvMovieName);
             tvName.setText(movie.getMovieName());
 
