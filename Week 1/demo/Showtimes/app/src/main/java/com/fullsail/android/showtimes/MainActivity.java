@@ -4,7 +4,7 @@ package com.scottwaite.android.showtimes;
 Created By: Scott Waite
 Course: Java II
 Instructor: Sherry Dubin
-Assignment: Fragment & File Fundamentals
+Assignment: Fundamentals Part 2
 Date: November 2, 2014
 */
 

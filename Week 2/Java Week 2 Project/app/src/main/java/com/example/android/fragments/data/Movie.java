@@ -1,22 +1,27 @@
 package com.scottwaite.android.fragments.data;
 
+/*
+Created By: Scott Waite
+Course: Java II
+Instructor: Sherry Dubin
+Assignment: Fragment & File Fundamentals
+Date: November 6, 2014
+*/
+
 import android.os.Bundle;
 
 public class Movie {
 
-    //	constants for field references
     public static final String MOVIE_NAME = "movieName";
     public static final String IMAGE_RESOURCE = "imageResource";
     public static final String PRICE = "price";
     public static final String INSTRUCTIONS = "instructions";
 
-    //	private fields
     private String movieName;
     private int imageResource;
     private String instructions;
     private double price;
 
-    //	getters and setters
     public String getMovieName() {
         return movieName;
     }
@@ -57,7 +62,6 @@ public class Movie {
         this.instructions = instructions;
     }
 
-    //	Create from a bundle
     public Movie(Bundle b) {
         if (b != null) {
             this.movieName = b.getString(MOVIE_NAME);
@@ -67,7 +71,6 @@ public class Movie {
         }
     }
 
-    //	Package data for transfer between activities
     public Bundle toBundle() {
         Bundle b = new Bundle();
         b.putString(MOVIE_NAME, this.movieName);
@@ -77,7 +80,6 @@ public class Movie {
         return b;
     }
 
-    //	Output movie data
     @Override
     public String toString() {
         return movieName;

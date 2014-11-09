@@ -1,11 +1,17 @@
 package com.scottwaite.android.fragments;
 
+/*
+Created By: Scott Waite
+Course: Java II
+Instructor: Sherry Dubin
+Assignment: Fragment & File Fundamentals
+Date: November 6, 2014
+*/
+
 import android.app.Activity;
 import android.os.Bundle;
 
-/**
- * Created by David on 7/21/2014.
- */
+
 public class MyPrefsActivity extends Activity {
 
     @Override

@@ -1,10 +1,17 @@
 package com.scottwaite.android.fragments;
 
+/*
+Created By: Scott Waite
+Course: Java II
+Instructor: Sherry Dubin
+Assignment: Fragment & File Fundamentals
+Date: November 6, 2014
+*/
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-// This activity is only used in single pane mode.
 public class MovieDetailActivity extends Activity {
 
 	@Override

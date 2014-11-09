@@ -13,9 +13,14 @@ import com.scottwaite.android.fragments.data.MovieData;
 
 import java.util.List;
 
-/**
- * Created by David on 7/16/2014.
- */
+/*
+Created By: Scott Waite
+Course: Java II
+Instructor: Sherry Dubin
+Assignment: Fragment & File Fundamentals
+Date: November 6, 2014
+*/
+
 public class MovieListFragment extends ListFragment {
 
     List<Movie> movies = new MovieData().getMovies();
