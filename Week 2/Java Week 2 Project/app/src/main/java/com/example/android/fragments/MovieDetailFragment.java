@@ -53,10 +53,6 @@ public class MovieDetailFragment extends Fragment {
             TextView tvInstructions = (TextView) view.findViewById(R.id.tvInstructions);
             tvInstructions.setText(movie.getInstructions());
 
-            NumberFormat fmt = NumberFormat.getCurrencyInstance();
-            TextView tvPrice = (TextView) view.findViewById(R.id.tvPrice);
-            tvPrice.setText(fmt.format(movie.getPrice()));
-
             ImageView ivPicture = (ImageView) view.findViewById(R.id.ivMovieImage);
             ivPicture.setImageResource(movie.getImageResource());
 

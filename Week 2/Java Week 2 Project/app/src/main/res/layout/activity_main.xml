@@ -1,15 +1,40 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/myContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E9E9E9"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:padding="3dip" >
+
+        <EditText
+            android:id="@+id/text_search_box"
+            android:hint="Movie Title"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:id="@+id/button_search" />
+    </LinearLayout>
 
     <Spinner
-        android:id="@+id/listFragment"
-        android:name="com.scottwaite.android.fragments.MovieListFragment"
-        android:layout_width="fill_parent"
-        android:layout_height="104dp"
-        tools:layout="@layout/movie_list_fragment" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner" />
 
-</FrameLayout>
+    <ListView
+        android:id="@+id/list_movies"
+        android:layout_width="match_parent"
+        android:layout_height="197dp" />
+
+</LinearLayout>

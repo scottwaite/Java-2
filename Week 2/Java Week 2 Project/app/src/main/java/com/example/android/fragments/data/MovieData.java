@@ -21,12 +21,12 @@ public class MovieData {
 	}
 
 	public MovieData() {
-		movies.add(new Movie("Ouija", R.drawable.demo, 15.95,
-				"Rating: 86%"));
-		movies.add(new Movie("Nightcrawler", R.drawable.demo, 12.95,
-				"Rating: 64%"));
-		movies.add(new Movie("Fury", R.drawable.demo, 17.95,
-				"Rating: 26%"));
+		movies.add(new Movie("Ouija", R.drawable.ouija, 10.95,
+				"Rating: 8%"));
+		movies.add(new Movie("Nightcrawler", R.drawable.nightcrawler, 10.95,
+				"Rating: 94%"));
+		movies.add(new Movie("Fury", R.drawable.fury, 10.95,
+				"Rating: 78%"));
 	}
 
 

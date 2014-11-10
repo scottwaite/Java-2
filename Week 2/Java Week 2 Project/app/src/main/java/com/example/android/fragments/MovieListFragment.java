@@ -63,3 +63,4 @@ public class MovieListFragment extends ListFragment {
         this.activity = (Callbacks) activity;
     }
 }
+
