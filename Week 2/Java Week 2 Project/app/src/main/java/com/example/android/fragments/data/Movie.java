@@ -10,24 +10,24 @@ Date: November 6, 2014
 
 import android.os.Bundle;
 
-public class Movie {
+public class Contact {
 
-    public static final String MOVIE_NAME = "movieName";
+    public static final String MOVIE_NAME = "contactName";
     public static final String IMAGE_RESOURCE = "imageResource";
     public static final String PRICE = "price";
     public static final String INSTRUCTIONS = "instructions";
 
-    private String movieName;
+    private String contactName;
     private int imageResource;
     private String instructions;
     private double price;
 
-    public String getMovieName() {
-        return movieName;
+    public String getContactName() {
+        return contactName;
     }
 
-    public void setMovieName(String movieName) {
-        this.movieName = movieName;
+    public void setContactName(String contactName) {
+        this.contactName = contactName;
     }
 
     public int getImageResource() {
@@ -55,16 +55,16 @@ public class Movie {
     }
 
     //	Used when creating the data object
-    public Movie(String id, int imageResource, double price, String instructions) {
-        this.movieName = id;
+    public Contact(String id, int imageResource, double price, String instructions) {
+        this.contactName = id;
         this.imageResource = imageResource;
         this.price = price;
         this.instructions = instructions;
     }
 
-    public Movie(Bundle b) {
+    public Contact(Bundle b) {
         if (b != null) {
-            this.movieName = b.getString(MOVIE_NAME);
+            this.contactName = b.getString(MOVIE_NAME);
             this.imageResource = b.getInt(IMAGE_RESOURCE);
             this.price = b.getDouble(PRICE);
             this.instructions = b.getString(INSTRUCTIONS);
@@ -73,7 +73,7 @@ public class Movie {
 
     public Bundle toBundle() {
         Bundle b = new Bundle();
-        b.putString(MOVIE_NAME, this.movieName);
+        b.putString(MOVIE_NAME, this.contactName);
         b.putInt(IMAGE_RESOURCE, this.imageResource);
         b.putDouble(PRICE, this.price);
         b.putString(INSTRUCTIONS, this.instructions);
@@ -82,7 +82,7 @@ public class Movie {
 
     @Override
     public String toString() {
-        return movieName;
+        return contactName;
     }
 
 }

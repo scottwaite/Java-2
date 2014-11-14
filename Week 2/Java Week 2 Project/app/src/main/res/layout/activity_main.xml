@@ -15,7 +15,7 @@
 
         <EditText
             android:id="@+id/text_search_box"
-            android:hint="Movie Title"
+            android:hint="Contact Title"
             android:layout_width="270dp"
             android:layout_height="wrap_content"
             android:gravity="center" />
@@ -33,7 +33,7 @@
         android:id="@+id/spinner" />
 
     <ListView
-        android:id="@+id/list_movies"
+        android:id="@+id/list_contacts"
         android:layout_width="match_parent"
         android:layout_height="197dp" />
 

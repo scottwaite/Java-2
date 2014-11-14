@@ -8,11 +8,11 @@
 
     <fragment
         android:id="@+id/listFragment"
-        android:name="com.scottwaite.android.fragments.MovieListFragment"
+        android:name="com.scottwaite.android.fragments.ContactListFragment"
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="fill_parent"
-        tools:layout="@layout/movie_list_fragment"/>
+        tools:layout="@layout/contact_list_fragment"/>
 
     <FrameLayout
         android:id="@+id/detailContainer"

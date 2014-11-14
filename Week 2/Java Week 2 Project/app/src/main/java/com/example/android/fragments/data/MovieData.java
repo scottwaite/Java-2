@@ -13,19 +13,19 @@ import com.scottwaite.android.fragments.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MovieData {
+public class ContactData {
 
-	private List<Movie> movies = new ArrayList<Movie>();
-	public List<Movie> getMovies() {
-		return movies;
+	private List<Contact> contacts = new ArrayList<Contact>();
+	public List<Contact> getContacts() {
+		return contacts;
 	}
 
-	public MovieData() {
-		movies.add(new Movie("Ouija", R.drawable.ouija, 10.95,
+	public ContactData() {
+		contacts.add(new Contact("Ouija", R.drawable.ouija, 10.95,
 				"Rating: 8%"));
-		movies.add(new Movie("Nightcrawler", R.drawable.nightcrawler, 10.95,
+		contacts.add(new Contact("Nightcrawler", R.drawable.nightcrawler, 10.95,
 				"Rating: 94%"));
-		movies.add(new Movie("Fury", R.drawable.fury, 10.95,
+		contacts.add(new Contact("Fury", R.drawable.fury, 10.95,
 				"Rating: 78%"));
 	}
 

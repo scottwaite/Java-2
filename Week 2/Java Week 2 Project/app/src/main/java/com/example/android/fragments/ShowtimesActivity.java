@@ -20,7 +20,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import com.scottwaite.android.fragments.MainActivity;
-import com.scottwaite.android.fragments.MovieDetailFragment;
+import com.scottwaite.android.fragments.ContactDetailFragment;
 import com.scottwaite.android.fragments.R;
 
 import org.apache.http.HttpResponse;
@@ -41,12 +41,12 @@ public class ShowtimesActivity extends Activity
     // Rotten Tomatoes API Key
     private static final String API_KEY = "8k7wm3wtat2p8dj55xm3bmcd";
 
-    // Number of movies per search
+    // Number of contacts per search
     private static final int MOVIE_PAGE_LIMIT = 50;
 
     private EditText searchBox;
     private Button searchButton;
-    private ListView moviesList;
+    private ListView contactsList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -61,15 +61,15 @@ public class ShowtimesActivity extends Activity
             @Override
             public void onClick(View arg0)
             {
-                new RequestTask().execute("http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=" + API_KEY + "&q=" + searchBox.getText().toString().trim() + "&page_limit=" + MOVIE_PAGE_LIMIT);
+                new RequestTask().execute("http://api.rottentomatoes.com/api/public/v1.0/contacts.json?apikey=" + API_KEY + "&q=" + searchBox.getText().toString().trim() + "&page_limit=" + MOVIE_PAGE_LIMIT);
             }
         });
-        moviesList = (ListView) findViewById(R.id.list_movies);
+        contactsList = (ListView) findViewById(R.id.list_contacts);
     }
 
-    private void refreshMoviesList(String[] movieTitles)
+    private void refreshContactsList(String[] contactTitles)
     {
-        moviesList.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, movieTitles));
+        contactsList.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, contactTitles));
     }
 
     private class RequestTask extends AsyncTask<String, String, String>
@@ -115,16 +115,16 @@ public class ShowtimesActivity extends Activity
                 {
                     JSONObject jsonResponse = new JSONObject(response);
 
-                    JSONArray movies = jsonResponse.getJSONArray("movies");
+                    JSONArray contacts = jsonResponse.getJSONArray("contacts");
 
-                    String[] movieTitles = new String[movies.length()];
-                    for (int i = 0; i < movies.length(); i++)
+                    String[] contactTitles = new String[contacts.length()];
+                    for (int i = 0; i < contacts.length(); i++)
                     {
-                        JSONObject movie = movies.getJSONObject(i);
-                        movieTitles[i] = movie.getString("title");
+                        JSONObject contact = contacts.getJSONObject(i);
+                        contactTitles[i] = contact.getString("title");
                     }
 
-                    refreshMoviesList(movieTitles);
+                    refreshContactsList(contactTitles);
                 }
                 catch (JSONException e)
                 {
