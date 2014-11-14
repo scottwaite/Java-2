@@ -12,20 +12,20 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-public class MovieDetailActivity extends Activity {
+public class contactDetailActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_movie_detail);
+		setContentView(R.layout.activity_contact_detail);
 
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 
         if (savedInstanceState == null) {
 //          Create the fragment, set its args, add it to the detail container
-            MovieDetailFragment fragment = new MovieDetailFragment();
+            contactDetailFragment fragment = new contactDetailFragment();
 
-            Bundle b = getIntent().getBundleExtra(MainActivity.MOVIE_BUNDLE);
+            Bundle b = getIntent().getBundleExtra(MainActivity.CONTACT_BUNDLE);
             fragment.setArguments(b);
 
             getFragmentManager().beginTransaction()

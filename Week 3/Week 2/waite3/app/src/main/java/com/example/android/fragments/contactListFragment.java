@@ -8,8 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.scottwaite.android.fragments.data.Movie;
-import com.scottwaite.android.fragments.data.MovieData;
+import com.scottwaite.android.fragments.data.contact;
+import com.scottwaite.android.fragments.data.contactData;
 
 import java.util.List;
 
@@ -21,21 +21,21 @@ Assignment: Multi-Activity App
 Date: November 13, 2014
 */
 
-public class MovieListFragment extends ListFragment {
+public class contactListFragment extends ListFragment {
 
-    List<Movie> movies = new MovieData().getMovies();
+    List<contact> contacts = new contactData().getcontacts();
     private Callbacks activity;
 
-    public MovieListFragment() {
+    public contactListFragment() {
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        MovieArrayAdapter adapter = new MovieArrayAdapter(getActivity(),
-                R.layout.movie_listitem,
-                movies);
+        contactArrayAdapter adapter = new contactArrayAdapter(getActivity(),
+                R.layout.contact_listitem,
+                contacts);
         setListAdapter(adapter);
     }
 
@@ -43,18 +43,18 @@ public class MovieListFragment extends ListFragment {
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.movie_list_fragment, container, false);
+        View rootView = inflater.inflate(R.layout.contact_list_fragment, container, false);
         return rootView;
     }
 
     public interface Callbacks {
-        public void onItemSelected(Movie movie);
+        public void onItemSelected(contact contact);
     }
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
-        Movie movie = movies.get(position);
-        activity.onItemSelected(movie);
+        contact contact = contacts.get(position);
+        activity.onItemSelected(contact);
     }
 
     @Override

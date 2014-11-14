@@ -17,23 +17,23 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.scottwaite.android.fragments.data.Movie;
+import com.scottwaite.android.fragments.data.contact;
 
 import java.text.NumberFormat;
 
-public class MovieDetailFragment extends Fragment {
+public class contactDetailFragment extends Fragment {
 
-    Movie movie;
+    contact contact;
 
-    public MovieDetailFragment() {}
+    public contactDetailFragment() {}
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         Bundle b = getArguments();
-        if (b != null && b.containsKey(Movie.MOVIE_NAME)) {
-            movie = new Movie(b);
+        if (b != null && b.containsKey(contact.CONTACT_NAME)) {
+            contact = new contact(b);
         }
     }
 
@@ -43,18 +43,18 @@ public class MovieDetailFragment extends Fragment {
 
 
 
-        View view = inflater.inflate(R.layout.movie_detail_fragment, container, false);
+        View view = inflater.inflate(R.layout.contact_detail_fragment, container, false);
 
-        if (movie != null) {
+        if (contact != null) {
 
-            TextView tvName = (TextView) view.findViewById(R.id.tvMovieName);
-            tvName.setText(movie.getMovieName());
+            TextView tvName = (TextView) view.findViewById(R.id.tvcontactName);
+            tvName.setText(contact.getcontactName());
 
             TextView tvInstructions = (TextView) view.findViewById(R.id.tvInstructions);
-            tvInstructions.setText(movie.getInstructions());
+            tvInstructions.setText(contact.getInstructions());
 
-            ImageView ivPicture = (ImageView) view.findViewById(R.id.ivMovieImage);
-            ivPicture.setImageResource(movie.getImageResource());
+            ImageView ivPicture = (ImageView) view.findViewById(R.id.ivcontactImage);
+            ivPicture.setImageResource(contact.getImageResource());
 
         }
 

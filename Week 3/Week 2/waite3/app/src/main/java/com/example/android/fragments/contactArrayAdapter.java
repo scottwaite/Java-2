@@ -17,16 +17,16 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.scottwaite.android.fragments.data.Movie;
+import com.scottwaite.android.fragments.data.contact;
 
 import java.util.List;
 
-public class MovieArrayAdapter extends ArrayAdapter<Movie> {
+public class contactArrayAdapter extends ArrayAdapter<contact> {
 
 	private Context context;
-	private List<Movie> objects;
+	private List<contact> objects;
 	
-	public MovieArrayAdapter(Context context, int resource, List<Movie> objects) {
+	public contactArrayAdapter(Context context, int resource, List<contact> objects) {
 		super(context, resource, objects);
 		this.context = context;
 		this.objects = objects;
@@ -34,17 +34,17 @@ public class MovieArrayAdapter extends ArrayAdapter<Movie> {
 	
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		Movie movie = objects.get(position);
+		contact contact = objects.get(position);
 		
 		LayoutInflater inflater = 
 				(LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
-		View view = inflater.inflate(R.layout.movie_listitem, null);
+		View view = inflater.inflate(R.layout.contact_listitem, null);
 		
-		ImageView image = (ImageView) view.findViewById(R.id.ivMovieImage);
-		image.setImageResource(movie.getImageResource());
+		ImageView image = (ImageView) view.findViewById(R.id.ivcontactImage);
+		image.setImageResource(contact.getImageResource());
 		
-		TextView tv = (TextView) view.findViewById(R.id.tvMovieName);
-		tv.setText(movie.getMovieName());
+		TextView tv = (TextView) view.findViewById(R.id.tvcontactName);
+		tv.setText(contact.getcontactName());
 		
 		return view;
 	}
