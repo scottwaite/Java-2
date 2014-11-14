@@ -8,7 +8,7 @@ Assignment: Multi-Activity App
 Date: November 13, 2014
 */
 
- /*Comment until fixed
+/* Comment until fixed
 
 
 import android.app.Fragment;
