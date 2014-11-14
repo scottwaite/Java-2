@@ -22,12 +22,12 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.RemoteException;
-import android.provider.ContactsContract;
-import android.provider.ContactsContract.CommonDataKinds;
-import android.provider.ContactsContract.CommonDataKinds.Phone;
-import android.provider.ContactsContract.CommonDataKinds.Photo;
-import android.provider.ContactsContract.CommonDataKinds.StructuredName;
-import android.provider.ContactsContract.RawContacts;
+import android.provider.contactsContract;
+import android.provider.contactsContract.CommonDataKinds;
+import android.provider.contactsContract.CommonDataKinds.Phone;
+import android.provider.contactsContract.CommonDataKinds.Photo;
+import android.provider.contactsContract.CommonDataKinds.StructuredName;
+import android.provider.contactsContract.Rawcontacts;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -60,7 +60,7 @@ public class ShowtimesActivity extends Activity
             }
         };
 
-        // Defining OnClick listener for the Add Contact Button
+        // Defining OnClick listener for the Add contact Button
         OnClickListener addClickListener = new OnClickListener() {
 
             @Override
@@ -77,28 +77,28 @@ public class ShowtimesActivity extends Activity
                 ArrayList<ContentProviderOperation> ops =
                         new ArrayList<ContentProviderOperation>();
 
-                int rawContactID = ops.size();
+                int rawcontactID = ops.size();
 
                 // Adding insert operation to operations list
-                // to insert a new raw contact in the table ContactsContract.RawContacts
-                ops.add(ContentProviderOperation.newInsert(ContactsContract.RawContacts.CONTENT_URI)
-                        .withValue(ContactsContract.RawContacts.ACCOUNT_TYPE, null)
-                        .withValue(RawContacts.ACCOUNT_NAME, null)
+                // to insert a new raw contact in the table contactsContract.Rawcontacts
+                ops.add(ContentProviderOperation.newInsert(contactsContract.Rawcontacts.CONTENT_URI)
+                        .withValue(contactsContract.Rawcontacts.ACCOUNT_TYPE, null)
+                        .withValue(Rawcontacts.ACCOUNT_NAME, null)
                         .build());
 
                 // Adding insert operation to operations list
-                // to insert display name in the table ContactsContract.Data
-                ops.add(ContentProviderOperation.newInsert(ContactsContract.Data.CONTENT_URI)
-                        .withValueBackReference(ContactsContract.Data.RAW_CONTACT_ID, rawContactID)
-                        .withValue(ContactsContract.Data.MIMETYPE, StructuredName.CONTENT_ITEM_TYPE)
+                // to insert display name in the table contactsContract.Data
+                ops.add(ContentProviderOperation.newInsert(contactsContract.Data.CONTENT_URI)
+                        .withValueBackReference(contactsContract.Data.RAW_CONTACT_ID, rawcontactID)
+                        .withValue(contactsContract.Data.MIMETYPE, StructuredName.CONTENT_ITEM_TYPE)
                         .withValue(StructuredName.DISPLAY_NAME, etName.getText().toString())
                         .build());
 
                 // Adding insert operation to operations list
-                // to insert Mobile Number in the table ContactsContract.Data
-                ops.add(ContentProviderOperation.newInsert(ContactsContract.Data.CONTENT_URI)
-                        .withValueBackReference(ContactsContract.Data.RAW_CONTACT_ID, rawContactID)
-                        .withValue(ContactsContract.Data.MIMETYPE, Phone.CONTENT_ITEM_TYPE)
+                // to insert Mobile Number in the table contactsContract.Data
+                ops.add(ContentProviderOperation.newInsert(contactsContract.Data.CONTENT_URI)
+                        .withValueBackReference(contactsContract.Data.RAW_CONTACT_ID, rawcontactID)
+                        .withValue(contactsContract.Data.MIMETYPE, Phone.CONTENT_ITEM_TYPE)
                         .withValue(Phone.NUMBER, etMobile.getText().toString())
                         .withValue(Phone.TYPE, CommonDataKinds.Phone.TYPE_MOBILE)
                         .build());
@@ -109,12 +109,12 @@ public class ShowtimesActivity extends Activity
                     mBitmap.compress(Bitmap.CompressFormat.PNG , 75, stream);
 
                     // Adding insert operation to operations list
-                    // to insert Photo in the table ContactsContract.Data
-                    ops.add(ContentProviderOperation.newInsert(ContactsContract.Data.CONTENT_URI)
-                            .withValueBackReference(ContactsContract.Data.RAW_CONTACT_ID, rawContactID)
-                            .withValue(ContactsContract.Data.IS_SUPER_PRIMARY, 1)
-                            .withValue(ContactsContract.Data.MIMETYPE,Photo.CONTENT_ITEM_TYPE)
-                            .withValue(ContactsContract.CommonDataKinds.Photo.PHOTO,stream.toByteArray())
+                    // to insert Photo in the table contactsContract.Data
+                    ops.add(ContentProviderOperation.newInsert(contactsContract.Data.CONTENT_URI)
+                            .withValueBackReference(contactsContract.Data.RAW_CONTACT_ID, rawcontactID)
+                            .withValue(contactsContract.Data.IS_SUPER_PRIMARY, 1)
+                            .withValue(contactsContract.Data.MIMETYPE,Photo.CONTENT_ITEM_TYPE)
+                            .withValue(contactsContract.CommonDataKinds.Photo.PHOTO,stream.toByteArray())
                             .build());
 
                     try {
@@ -125,8 +125,8 @@ public class ShowtimesActivity extends Activity
                 }
                 try{
                     // Executing all the insert operations as a single database transaction
-                    getContentResolver().applyBatch(ContactsContract.AUTHORITY, ops);
-                    Toast.makeText(getBaseContext(), "Contact is successfully added", Toast.LENGTH_SHORT).show();
+                    getContentResolver().applyBatch(contactsContract.AUTHORITY, ops);
+                    Toast.makeText(getBaseContext(), "contact is successfully added", Toast.LENGTH_SHORT).show();
                 }catch (RemoteException e) {
                     e.printStackTrace();
                 }catch (OperationApplicationException e) {
@@ -136,13 +136,13 @@ public class ShowtimesActivity extends Activity
         };
 
 
-        // Creating a button click listener for the "Add Contact" button
+        // Creating a button click listener for the "Add contact" button
         OnClickListener contactsClickListener = new OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                // Creating an intent to open Android's Contacts List
-                Intent contacts = new Intent(Intent.ACTION_VIEW,ContactsContract.Contacts.CONTENT_URI);
+                // Creating an intent to open Android's contacts List
+                Intent contacts = new Intent(Intent.ACTION_VIEW,contactsContract.contacts.CONTENT_URI);
 
                 // Starting the activity
                 startActivity(contacts);
@@ -153,20 +153,20 @@ public class ShowtimesActivity extends Activity
         // Getting reference to ImageView
         ImageButton ibPhoto = (ImageButton) findViewById(R.id.ib_photo);
 
-        // Getting Reference to Add Contact Button
+        // Getting Reference to Add contact Button
         Button btnAdd = (Button) findViewById(R.id.btn_add);
 
-        // Getting Reference to Contact List Button
+        // Getting Reference to contact List Button
         Button btnList = (Button) findViewById(R.id.btn_list);
 
         // Setting OnClick Listener for the photo
         ibPhoto.setOnClickListener(photoClickListener);
 
 
-        // Setting OnClick Listener of the Add Contact button
+        // Setting OnClick Listener of the Add contact button
         btnAdd.setOnClickListener(addClickListener);
 
-        // Setting OnClick Listener for the Contacts List button
+        // Setting OnClick Listener for the contacts List button
         btnList.setOnClickListener(contactsClickListener);
 
     }

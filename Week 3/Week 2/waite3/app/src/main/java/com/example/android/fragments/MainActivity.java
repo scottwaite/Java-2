@@ -18,13 +18,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.scottwaite.android.fragments.data.Movie;
+import com.scottwaite.android.fragments.data.contact;
 
 
 public class MainActivity extends Activity
-    implements MovieListFragment.Callbacks {
+    implements contactListFragment.Callbacks {
 
-    public static final String MOVIE_BUNDLE = "MOVIE_BUNDLE";
+    public static final String CONTACT_BUNDLE = "CONTACT_BUNDLE";
     private static final int REQUEST_CODE = 1001;
 
     private boolean isTwoPane = false;
@@ -74,19 +74,19 @@ public class MainActivity extends Activity
     }
 
     @Override
-    public void onItemSelected(Movie movie) {
-        Bundle b = movie.toBundle();
+    public void onItemSelected(contact contact) {
+        Bundle b = contact.toBundle();
 
         if (isTwoPane) {
-            MovieDetailFragment fragment = new MovieDetailFragment();
+            contactDetailFragment fragment = new contactDetailFragment();
             fragment.setArguments(b);
             getFragmentManager().beginTransaction()
                     .replace(R.id.detailContainer, fragment)
                     .commit();
         }
         else {
-            Intent intent = new Intent(this, MovieDetailActivity.class);
-            intent.putExtra(MOVIE_BUNDLE, b);
+            Intent intent = new Intent(this, contactDetailActivity.class);
+            intent.putExtra(CONTACT_BUNDLE, b);
             startActivityForResult(intent, REQUEST_CODE);
         }
     }
