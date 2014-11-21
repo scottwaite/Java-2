@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/txtLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Area Theater Has Strict Rule Against Bringing In Outside Movies - AUSTIN, TX—Reiterating the movie theater’s longstanding policy, employees at Barton Creek Cinema confirmed Thursday that customers are strictly prohibited from bringing in their own films. “If anyone is caught sneaking outside movies into our theater, they will be politely asked to leave,” said general manager Joel Armstrong, noting that ushers had been instructed to look for any 35mm film canisters, reel-to-reel projectors, or surround sound speaker systems that ticket holders might be attempting to conceal on their person and carry into the theater. “Showing movies is actually how we make a lot of our money here, so in order to keep providing our clientele with a top-quality viewing experience, it’s important that customers watch only those movies that we are offering. That is why we ask all patrons to kindly leave their full-length documentary features and action films at home.” Armstrong added that if customers are intent on viewing their own motion pictures, they must finish them up in the parking lot before entering the building."
+        android:textSize="16dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+</RelativeLayout>

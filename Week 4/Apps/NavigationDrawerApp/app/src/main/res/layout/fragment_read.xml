@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/txtLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SAN FRANCISCO—Entrepreneur Elon Musk unveiled his plans Monday for a revolutionary Hyperloop transportation system, which would seat riders in vacuum-like tubes, launch them from Los Angeles to San Francisco, and would be powered solely by the screams of its terrified passengers. “With zero negative effects on the environment, the Hyperloop could cut travel times in half, or even by two thirds, depending on how loud passengers’ shrieks and pleas for help are,” said Musk, adding that special turbines will convert the horrified screams of its riders into kinetic energy, which would then propel the capsule at record speeds toward its final destination. “If passengers are terrified enough to scream in abject terror the entire duration of the ride—and they probably will, knowing that even the slightest malfunction will cause their flesh to peel off their bodies—an hour-and-a-half trip from New York City to San Francisco could be a reality.” Musk added that his team is still working on technology that would power the rapid transportation tubes with both crying and silently praying to God for the trip to be over."
+        android:textSize="16dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtLabel"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/imageView" />
+
+</RelativeLayout>
