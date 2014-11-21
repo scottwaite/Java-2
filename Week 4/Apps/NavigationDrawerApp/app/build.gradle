@@ -6,8 +6,8 @@ android {
 
     defaultConfig {
         applicationId "com.scottwaite.navigationdrawerexample"
-        minSdkVersion 8
-        targetSdkVersion 18
+        minSdkVersion 14
+        targetSdkVersion 19
     }
 
     buildTypes {
